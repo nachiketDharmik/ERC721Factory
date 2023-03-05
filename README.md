@@ -15,9 +15,18 @@ STEPS :
     cmd: node nftMint.js "YOUR_PRIVATE_KEY" "PROVIDER_API"
 
     Example: 
+
     cmd: node nftMint.js "abcdefghijklm0987654321"  "https://goerli.infura.io/v3/YOUR_PROJECT_ID"
 
-    Above command will call mintNFT function of NFTcontract and mint new NFT.
+   
+    Above command explained :
+    a. Set variables "privateKey" and "Infuraprovider"  which is used in below code .
+
+      const provider = new ethers.providers.JsonRpcProvider(Infuraprovider);
+
+      let walletWithProvider = new ethers.Wallet(privateKey, provider);
+
+    b. Function writeContract() will call "mintNFT" function of NFTcontract and mint new NFT.
 
     
   
